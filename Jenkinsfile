@@ -19,12 +19,12 @@ node {
 
        stage('Compiling'){
 
-          sh 'mvn deploy'
+          cmd 'mvn deploy'
        }
 	   
       stage('Sonar') {
                     //add stage sonar
-                    sh 'mvn sonar:sonar'
+                    cmd 'mvn sonar:sonar'
                 }
        stage('mail'){
 
