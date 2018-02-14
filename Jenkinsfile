@@ -1,11 +1,9 @@
 #!groovy
 
 node {
-	stages {
-		stage ('Maven Intialization') {
-			bat 'mvn clean install'
-		}
+
+	stage ('compiling'){
+		bat 'mvn clean install -DskipTests'
 	}
 }
-
     
